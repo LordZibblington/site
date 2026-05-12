@@ -5,7 +5,7 @@ This guide will go over the general process of debugging, teaching you how to ge
 
 Debugging is, put simply, the process of figuring out why your mod isn’t doing what you want it to do. In this guide, I’m going to walk you through the process I use to fix my mod problems when I can’t find the answer online. You’re not always going to have the answers, documentation, or proper tools to instantly understand what is causing your mod to malfunction, and depending on how innovative your mod is, you might be the first person to ever need the answer. That can sound intimidating, which is exactly why this guide is here to help. These intimidating moments and how you handle them are what make the difference between someone who writes code and someone who makes mods.
 
-![Debugging](/docs/en/guides/debugging-basics/images/debugging-cycle.png)
+![Debugging](/content/docs/en/guides/debugging-basics/images/debugging-cycle.png)
 
 The debugging process is a cycle, as shown above, and we’ll be going over each of the four steps:
 
@@ -26,21 +26,21 @@ When setting up our modding/debugging environment, we’re going to want three t
 
 
 ### File Editor
-The Asset Editor is great for what it's built to do, but it's still in development and many file types only allow Script view, which is basically just notepad. Good for minor adjustments, but you definitely want something better if you're going to be doing significant changes. The official Hytale Modding recommendation is to use IntelliJ, and it’s what I use for my own mods as well. It lets me hide portions of my file, tells me when I’ve made a basic error, color codes the file to make it much easier to read, and lets me run advanced find and replace searches. These features are completely absent from the Asset Editor, and they will make your life much easier when you start taking advantage of them. For more information on installing IntelliJ, see [Setting Up Your Development Environment](/docs/en/guides/plugin/setting-up-env).
+The Asset Editor is great for what it's built to do, but it's still in development and many file types only allow Script view, which is basically just notepad. Good for minor adjustments, but you definitely want something better if you're going to be doing significant changes. The official Hytale Modding recommendation is to use IntelliJ, and it’s what I use for my own mods as well. It lets me hide portions of my file, tells me when I’ve made a basic error, color codes the file to make it much easier to read, and lets me run advanced find and replace searches. These features are completely absent from the Asset Editor, and they will make your life much easier when you start taking advantage of them. For more information on installing IntelliJ, see [Setting Up Your Development Environment](/content/docs/en/guides/plugin/setting-up-env.mdx).
 
 ### Log Viewing
 There are many different ways to implement live Hytale log viewing, and plenty of people are more than willing to share their own methods of viewing logs. It’s a tale as old as computers, and in this section I’ll be going over how I use Notepad++ to accomplish this. If that method doesn’t appeal to you, a quick Google search of “How to view a text file live” will show you there are quite a few different options not covered here.
 
 
-__Step 1:__ Download and install the stable version of [Notepad++](https://notepad-plus-plus.org/downloads/). Watch out for malicious advertisements.
-![Visual guide to downloading Notepad++](/docs/en/guides/debugging-basics/images/notepadplusplus.png)
+__Step 1:__ Download and install the stable version of [Notepad++](https://notepad-plus-plus.org/downloads/). Watch out for malicious advertisements!
+![Visual guide to downloading Notepad++](/content/docs/en/guides/debugging-basics/images/notepadplusplus.png)
 
 __Step 2:__ Navigate to your Hytale Logs folder. You can find it at %appdata%/Hytale/UserData/Logs on Windows and ~/.local/share/Hytale/UserData/Logs on Linux.
 
 __Step 3:__ Sort by Date Modified and open the most recent log file (indicated by a .lck file of the same name) with Notepad++.
 
 __Step 4:__ Click the Monitoring button (An eye inside of a square, located next to the record button on the top toolbar).
-![Location of Monitoring button](/docs/en/guides/debugging-basics/images/monitoring.png)
+![Location of Monitoring button](/content/docs/en/guides/debugging-basics/images/monitoring.png)
 
 That’s it! You’re now looking at a live log of what your server has to say. We’ll go over how to review the log later, but one useful shortcut to remember is Ctrl+End to immediately jump to the most recent entries.
 
@@ -63,7 +63,7 @@ Before you accept that you have no information to work with, make sure you read 
 
 If you get an error, try to figure out what it’s telling you. Using an AI such as Claude here can be really helpful, or asking around to see if anyone has any idea what the error is, but make sure you make an effort to figure it out yourself first. What you learn will stick better if you make an effort first, and you’ll know more next time you have to deal with an issue.
 
-Sometimes you won’t have any information other than it just doesn’t work. That’s when you want to think about how you can see what’s going on. If you’re programming your mod in Java there’s a handy guide on sending messages to the log [here](docs/en/guides/plugin/logging) and if you’re using the asset editor, try to think about how you can implement changes you can see. When messing with NPCs, I like using the Spawn function to see if parts of my mod are actually working and changing the Appearance to confirm my file is actually loading.
+Sometimes you won’t have any information other than it just doesn’t work. That’s when you want to think about how you can see what’s going on. If you’re programming your mod in Java there’s a handy guide on sending messages to the log [here](/content/docs/en/guides/plugin/logging.mdx) and if you’re using the asset editor, try to think about how you can implement changes you can see. When messing with NPCs, I like using the Spawn function to see if parts of my mod are actually working and changing the Appearance to confirm my file is actually loading.
 
 
 ### What could be causing this?
